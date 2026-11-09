@@ -460,6 +460,9 @@ ul, ol { padding-left: 1.2em; }
 .motto img { width: clamp(180px, 22vw, 260px); mix-blend-mode: multiply; } /* hides the logo's white background on pale blue */
 .milestones { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: clamp(24px, 5vw, 72px); align-items: start; }
 @media (max-width: 800px) { .milestones { grid-template-columns: minmax(0, 1fr); } }
+.milestones__photo { margin: clamp(24px, 3vw, 36px) 0 0; }
+.milestones__photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 53% 50%; border-radius: var(--radius-photo); }
+@media (min-width: 801px) and (max-width: 1100px) { .milestones__photo img { aspect-ratio: 4 / 5; } } /* narrow column: taller, to sit level with the timeline */
 @media (max-width: 700px) { .motto { grid-template-columns: minmax(0, 1fr); } .motto img { order: -1; } }
 
 .welcome { display: grid; grid-template-columns: minmax(0, 460px) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
@@ -685,6 +688,9 @@ ul, ol { padding-left: 1.2em; }
 .wide-photo { margin: 0 0 clamp(32px, 4vw, 48px); }
 .wide-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 30%; border-radius: var(--radius-photo); }
 @media (max-width: 700px) { .wide-photo img { aspect-ratio: 4 / 3; } }
+/* Support: students opening letters, under the ways to give */
+.give-photo { margin: clamp(32px, 4vw, 48px) 0 0; }
+.give-photo img { object-position: 50% 34%; }
 
 /* Home: Sarah's story as one card, photo on the left, story on the right */
 .story-card {

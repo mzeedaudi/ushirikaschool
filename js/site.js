@@ -217,7 +217,7 @@ function initMarqueeToggles() {
 /* ---------- Scroll animations ---------- */
 const REVEAL = [
   // photos unveil from the bottom
-  ["rv-photo", ".feature__photo, .portrait-frame, .story-card__photo, .wide-photo, .person__photo, .ydf__photo, .mosaic figure, .photo-row figure, .story-photo, .level__photo, .support-photo, .sponsor__photo, .callout__photo, .g-item"],
+  ["rv-photo", ".feature__photo, .portrait-frame, .milestones__photo, .story-card__photo, .wide-photo, .person__photo, .ydf__photo, .mosaic figure, .photo-row figure, .story-photo, .level__photo, .support-photo, .sponsor__photo, .callout__photo, .g-item"],
   // class ladder steps grow upwards
   ["rv-rise", ".ladder li"],
   // text and boxes fade up
