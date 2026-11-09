@@ -9,10 +9,10 @@ const SITE = {
   phone: "0721 556 239",
   phoneLink: "+254721556239",
   whatsapp: "254721556239",
-  email: "tunzatoto@yahoo.com",
+  email: "info@ushirikaschool.com",
 
   // Formspree sends the contact, sponsorship and newsletter forms to your email.
-  // 1. Sign up at https://formspree.io with tunzatoto@yahoo.com
+  // 1. Sign up at https://formspree.io with info@ushirikaschool.com
   // 2. Create a form and copy its ID (the letters after /f/ in the endpoint,
   //    for example "xpzkqwer")
   // 3. Paste it between the quotes below.
