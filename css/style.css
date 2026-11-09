@@ -736,10 +736,11 @@ ul, ol { padding-left: 1.2em; }
    on the right, with the building-work photo pinned over its bottom-left corner */
 .lotte { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(40px, 6vw, 88px); align-items: center; }
 .lotte__text h2 { margin-bottom: .45em; }
-.lotte__byline { display: flex; align-items: center; gap: 18px; margin: 0 0 26px; }
-.lotte__byline img { flex: none; width: 96px; height: 96px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 4px #fff, 0 0 0 7px var(--blue); }
-.lotte__byline p { margin: 0; font-family: var(--font-display); font-size: 1rem; line-height: 1.35; color: var(--muted); }
-.lotte__byline strong { display: block; font-size: 1.375rem; color: var(--navy); }
+/* round partner icon beside the name (Lotte Davis, Vonda-Lee Sharun) */
+.lotte__byline, .vonda__byline { display: flex; align-items: center; gap: 18px; margin: 0 0 26px; }
+.lotte__byline img, .vonda__byline img { flex: none; width: 96px; height: 96px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 4px #fff, 0 0 0 7px var(--blue); }
+.lotte__byline p, .vonda__byline p { margin: 0; font-family: var(--font-display); font-size: 1rem; line-height: 1.35; color: var(--muted); }
+.lotte__byline strong, .vonda__byline strong { display: block; font-size: 1.375rem; color: var(--navy); }
 .lotte__text .lede { margin-bottom: 1.4em; }
 .lotte__text > p:not(.lede) { font-size: 1.0625rem; }
 .lotte__text .btn-row { margin-top: 8px; }
@@ -760,35 +761,19 @@ ul, ol { padding-left: 1.2em; }
   .lotte__build { width: 46%; }
 }
 @media (max-width: 480px) {
-  .lotte__byline img { width: 80px; height: 80px; }
+  .lotte__byline img, .vonda__byline img { width: 80px; height: 80px; }
   .lotte__build { padding: 6px; border-radius: 18px; }
   .lotte__build figcaption { font-size: .8125rem; }
 }
 
-/* About: partner spotlight on Vonda-Lee Sharun, champion in Canada. Portrait on the left in an
-   offset blue frame, story on the right */
-.vonda { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: clamp(48px, 7vw, 104px); align-items: center; }
-.vonda__photo { position: relative; margin: 0 18px 18px 0; width: calc(100% - 18px); max-width: 460px; justify-self: center; }
-.vonda__photo::before {
-  content: ""; position: absolute; inset: 18px -18px -18px 18px; z-index: 0;
-  border: 3px solid var(--blue); border-radius: calc(var(--radius-photo) + 4px);
-}
-.vonda__photo img {
-  position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%;
-  border-radius: var(--radius-photo); box-shadow: 0 34px 64px -34px rgba(15, 45, 74, .5);
-}
-.vonda__photo figcaption {
-  position: absolute; z-index: 2; left: 16px; bottom: 16px; display: flex; align-items: center; gap: 8px;
-  padding: 8px 14px; border-radius: 999px; background: rgba(10, 32, 54, .8); color: #fff;
-  font-family: var(--font-display); font-size: .875rem; font-weight: 600; line-height: 1.3;
-}
-.vonda__photo figcaption::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--red); flex: none; }
-.vonda__text h2 { margin-bottom: .45em; }
-.vonda__byline { margin: 0 0 22px; font-family: var(--font-display); font-size: 1rem; line-height: 1.35; color: var(--muted); }
-.vonda__byline strong { display: block; font-size: 1.375rem; color: var(--navy); }
-.vonda__text .lede { margin-bottom: 1em; }
-.vonda__text > p:not(.lede):not(.vonda__byline) { font-size: 1.0625rem; }
-.vonda__causes { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 4px 0 28px; padding: 0; }
+/* About: partner spotlight on Vonda-Lee Sharun, champion in Canada. Two columns of text:
+   heading, round icon with her name and the lede on the left; the story, commitments and
+   button on the right */
+.vonda { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.vonda__intro h2 { margin-bottom: .45em; }
+.vonda__intro .lede { margin-bottom: 0; }
+.vonda__more > p { font-size: 1.0625rem; margin-bottom: 1.4em; }
+.vonda__causes { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0 0 28px; padding: 0; }
 .vonda__causes li {
   display: inline-flex; align-items: center; gap: 8px; padding: 8px 15px; border-radius: 999px;
   background: #fff; border: 1.5px solid var(--line);
@@ -797,13 +782,9 @@ ul, ol { padding-left: 1.2em; }
 .vonda__causes li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--blue); flex: none; }
 .vonda__causes li:first-child::before { background: var(--red); }
 @media (max-width: 860px) {
-  .vonda { grid-template-columns: minmax(0, 1fr); gap: 44px; }
-  .vonda__photo { max-width: 380px; }
+  .vonda { grid-template-columns: minmax(0, 1fr); gap: 28px; }
 }
 @media (max-width: 480px) {
-  .vonda__photo { margin: 0 12px 12px 0; width: calc(100% - 12px); }
-  .vonda__photo::before { inset: 12px -12px -12px 12px; }
-  .vonda__photo figcaption { left: 10px; bottom: 10px; font-size: .8125rem; }
   .vonda__causes li { font-size: .875rem; padding: 7px 13px; }
 }
 

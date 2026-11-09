@@ -217,11 +217,11 @@ function initMarqueeToggles() {
 /* ---------- Scroll animations ---------- */
 const REVEAL = [
   // photos unveil from the bottom
-  ["rv-photo", ".feature__photo, .portrait-frame, .milestones__photo, .lotte__group, .lotte__build, .vonda__photo, .story-card__photo, .wide-photo, .person__photo, .ydf__photo, .mosaic figure, .photo-row figure, .story-photo, .level__photo, .support-photo, .sponsor__photo, .callout__photo, .g-item"],
+  ["rv-photo", ".feature__photo, .portrait-frame, .milestones__photo, .lotte__group, .lotte__build, .story-card__photo, .wide-photo, .person__photo, .ydf__photo, .mosaic figure, .photo-row figure, .story-photo, .level__photo, .support-photo, .sponsor__photo, .callout__photo, .g-item"],
   // class ladder steps grow upwards
   ["rv-rise", ".ladder li"],
   // text and boxes fade up
-  ["rv", ".section-head, .story-card__body > *, .lotte__text > *, .vonda__text > *, .facts > div, .team__group h3, .person__name, .person__role, .origin .prose > *, .crest, .story__text > *, .pullquote, .programmes li, .quote, .timeline li, .milestones > div, .values li, .statement, .give__panel, .fee-sheet, .form-card, .contact-list li, .level > div, .level > p, .callout > div, .paybill, .partners-intro, .strip-head, .empty, .ydf > *, .motto > *, .welcome > div:not(.feature__photo), .feature > .prose"]
+  ["rv", ".section-head, .story-card__body > *, .lotte__text > *, .vonda__intro > *, .vonda__more > *, .facts > div, .team__group h3, .person__name, .person__role, .origin .prose > *, .crest, .story__text > *, .pullquote, .programmes li, .quote, .timeline li, .milestones > div, .values li, .statement, .give__panel, .fee-sheet, .form-card, .contact-list li, .level > div, .level > p, .callout > div, .paybill, .partners-intro, .strip-head, .empty, .ydf > *, .motto > *, .welcome > div:not(.feature__photo), .feature > .prose"]
 ];
 function initReveal() {
   if (!MOTION) return;
