@@ -90,7 +90,7 @@ function renderFooter() {
         <div>
           <a class="footer-logo" href="index.html"><img src="assets/img/logo.png" alt="Ushirika School crest: Be the best" width="164" height="240"></a>
           <p>A community school in Laini Saba, Kibera, teaching children from PP1 to Senior School since ${SITE.founded}.</p>
-          <p>Founded and run by Youth Development Forum (YDF).</p>
+          <p>Founded and run by <a href="https://ydfkenya.org/">Youth Development Forum (YDF)</a>.</p>
         </div>
         <div>
           <h2>Pages</h2>
